@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NasaApiService} from "../nasa-api.service";
 import {NasaApi} from "../model/nasa-api";
-import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-home',
@@ -10,10 +9,6 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class HomeComponent implements OnInit {
   dataFromNasa: NasaApi | undefined
-
-  dateForm = new FormGroup({
-    dateToGo: new FormControl('')
-  })
 
   constructor(private service: NasaApiService) { }
 
