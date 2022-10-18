@@ -1,0 +1,8 @@
+<div class="container-sm" *ngFor="let data of dataFromNasaByDate">
+  <h1>Nasa Picture of the Day</h1>
+  <p>{{data?.title}} - {{data?.date}} - {{data?.copyright}}</p>
+  <p>
+    <i>{{data?.explanation}}</i>
+  </p>
+  <img src="{{data?.url}}" alt="{{data?.copyright}}" class="img-fluid rounded mx-auto d-block ">
+</div>
