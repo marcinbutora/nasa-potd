@@ -1,5 +1,5 @@
 <div class="container-sm" *ngFor="let data of dataFromNasaByDate">
-  <div class="p-4 mb-2 mt-2 bg-primary text-white rounded text-center"><h1>Nasa Picture of the Day | {{givenDate | date: 'dd.MM.yyyy'}}</h1></div>
+  <div class="p-4 mb-2 mt-2 bg-primary text-white rounded text-center"><h1>NASA Picture of the Day | {{givenDate | date: 'dd.MM.yyyy'}}</h1></div>
   <p class="text-center text-primary">{{data?.title}} - {{data?.date}} - {{data?.copyright}}</p>
   <p>
     <i>{{data?.explanation}}</i>
