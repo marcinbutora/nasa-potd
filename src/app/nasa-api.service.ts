@@ -15,4 +15,8 @@ export class NasaApiService {
   getDataFromNasaAPI = (): Observable<NasaApi> => {
     return this.http.get<NasaApi>(`${this.API_URL}${this.API_KEY}`);
 }
+
+  getDataFromNasaByDate = (date: string): Observable<NasaApi[]> => {
+    return this.http.get<NasaApi[]>(`${this.API_URL}${this.API_KEY}&start_date=${date}&end_date=${date}`)
+  }
 }

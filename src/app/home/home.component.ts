@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NasaApiService} from "../nasa-api.service";
 import {NasaApi} from "../model/nasa-api";
 
@@ -8,7 +8,6 @@ import {NasaApi} from "../model/nasa-api";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   dataFromNasa: NasaApi | undefined
 
   constructor(private service: NasaApiService) { }

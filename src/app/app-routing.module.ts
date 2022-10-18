@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
+import {ByDateComponent} from "./by-date/by-date.component";
 import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
-  { path: "", component: HomeComponent },
-  { path: "**", component: HomeComponent},
-  { path: "home", component: HomeComponent}
+  { path: "by-date/:date", component: ByDateComponent},
+  { path: "", component: HomeComponent}
 ]
 
 @NgModule({
