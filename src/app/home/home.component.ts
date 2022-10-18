@@ -9,6 +9,7 @@ import {NasaApi} from "../model/nasa-api";
 })
 export class HomeComponent implements OnInit {
   dataFromNasa: NasaApi | undefined
+  date = Date.now();
 
   constructor(private service: NasaApiService) { }
 
