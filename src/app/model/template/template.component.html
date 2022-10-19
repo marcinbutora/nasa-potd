@@ -1,0 +1,9 @@
+<div class="container-sm">
+  <div class="p-4 mb-2 mt-2 bg-primary text-white rounded text-center"><h3>NASA Picture of the Day
+    | {{ dataFromApi?.date | date: 'dd.MM.yyyy' }}</h3></div>
+  <p class="text-center text-primary">{{dataFromApi?.title}} - {{dataFromApi?.date}} - {{dataFromApi?.copyright}}</p>
+  <p>
+    <i>{{dataFromApi?.explanation}}</i>
+  </p>
+  <img src="{{dataFromApi?.url}}" alt="{{dataFromApi?.copyright}}" class="img-fluid rounded mx-auto d-block ">
+</div>
