@@ -3,9 +3,11 @@
     <h3>NASA Picture of the Day</h3>
     <h5>From {{ fromDate | date: 'EEEE, dd.MM' }} to {{ toDate | date: 'EEEE, dd.MM'}}</h5>
   </div>
+  <div *ngFor="let item of imageThumbnails">
   <div class="card-img-top">
-    <div class="card" *ngFor="let item of imageThumbnails">
-      <img class="img-fluid" [src]="item.url" [alt]="item.title"/>
+      <a href="date/{{item.date | date: 'yyyy-MM-dd'}}">
+      <img class="thumb" [src]="item.url" [alt]="item.title"/>
+      </a>
     </div>
   </div>
 </div>
