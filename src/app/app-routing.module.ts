@@ -1,13 +1,19 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
 import {ByDateComponent} from "./by-date/by-date.component";
 import {HomeComponent} from "./home/home.component";
 import {GalleryMonthComponent} from "./gallery-month/gallery-month.component";
 
+export const enum RouteLinks {
+  byDate = 'date/:date',
+  emptyLink = '',
+  fromTo = 'from/:fromDate/to/:toDate'
+}
+
 const routes: Routes = [
-  { path: "by-date/:date", component: ByDateComponent},
-  { path: "", component: HomeComponent},
-  { path: "fromDate/:fromDate/toDate/:toDate", component: GalleryMonthComponent}
+  {path: RouteLinks.byDate, component: ByDateComponent},
+  {path: RouteLinks.emptyLink, component: HomeComponent},
+  {path: RouteLinks.fromTo, component: GalleryMonthComponent}
 ]
 
 @NgModule({
@@ -17,4 +23,5 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
