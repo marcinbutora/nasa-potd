@@ -16,7 +16,11 @@ export class NasaApiService {
     return this.http.get<NasaApi>(`${this.API_URL}/apod?api_key=${this.API_KEY}`);
 }
 
-  getDataFromNasaByDate = (date: string): Observable<NasaApi[]> => {
-    return this.http.get<NasaApi[]>(`${this.API_URL}/apod?api_key=${this.API_KEY}&start_date=${date}&end_date=${date}`)
+  getDataFromNasaByDate = (date: string): Observable<NasaApi> => {
+    return this.http.get<NasaApi>(`${this.API_URL}/apod?api_key=${this.API_KEY}&date=${date}`)
+  }
+
+  getDataFromSpecificDate = (fromDate: string, toDate: string): Observable<NasaApi[]> => {
+    return this.http.get<NasaApi[]>(`${this.API_URL}/apod?api_key=${this.API_KEY}&start_date=${fromDate}&end_date=${toDate}`)
   }
 }
