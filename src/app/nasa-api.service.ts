@@ -8,7 +8,7 @@ import {NasaApi} from "./model/nasa-api";
 })
 export class NasaApiService {
   private readonly API_KEY = 'EPb28HmsN0sXPyq2mj0nrwQFBj17dgjOXbCTgV8q';
-  private readonly API_URL = `https://api.nasa.gov/planetary/apod?api_key=`;
+  private readonly API_URL = `https://api.nasa.gov/planetary`;
 
   constructor(private http: HttpClient) { }
 
@@ -17,6 +17,6 @@ export class NasaApiService {
 }
 
   getDataFromNasaByDate = (date: string): Observable<NasaApi[]> => {
-    return this.http.get<NasaApi[]>(`${this.API_URL}${this.API_KEY}&start_date=${date}&end_date=${date}`)
+    return this.http.get<NasaApi[]>(`${this.API_URL}/apod?api_key=${this.API_KEY}&start_date=${date}&end_date=${date}`)
   }
 }
