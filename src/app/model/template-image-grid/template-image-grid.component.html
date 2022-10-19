@@ -1,0 +1,11 @@
+<div class="container-sm">
+  <div class="p-4 mb-2 mt-2 bg-primary text-white rounded text-center">
+    <h3>NASA Picture of the Day</h3>
+    <h5>From {{ fromDate | date: 'dd.MM.yyyy' }} to {{ toDate | date: 'dd.MM.yyyy'}}</h5>
+  </div>
+  <div class="card-img-top">
+    <div class="card" *ngFor="let item of imageThumbnails">
+      <img class="img-thumbnail" [src]="item.url" [alt]="item.title"/>
+    </div>
+  </div>
+</div>

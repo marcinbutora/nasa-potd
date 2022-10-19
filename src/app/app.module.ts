@@ -8,13 +8,17 @@ import {HttpClientModule} from "@angular/common/http";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ByDateComponent } from './by-date/by-date.component';
 import { TemplateComponent } from './model/template/template.component';
+import { TemplateImageGridComponent } from './model/template-image-grid/template-image-grid.component';
+import { GalleryMonthComponent } from './gallery-month/gallery-month.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ByDateComponent,
-    TemplateComponent
+    TemplateComponent,
+    TemplateImageGridComponent,
+    GalleryMonthComponent
   ],
   imports: [
     BrowserModule,
