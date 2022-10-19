@@ -12,7 +12,7 @@ import {Title} from "@angular/platform-browser";
 export class ByDateComponent implements OnInit {
 
   dataFromNasaByDate: NasaApi[] = []
-  givenDate!: string
+  givenDate: string = ''
 
   constructor(private service: NasaApiService, private route: ActivatedRoute, private title: Title) { }
 

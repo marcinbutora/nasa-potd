@@ -13,7 +13,7 @@ export class NasaApiService {
   constructor(private http: HttpClient) { }
 
   getDataFromNasaAPI = (): Observable<NasaApi> => {
-    return this.http.get<NasaApi>(`${this.API_URL}${this.API_KEY}`);
+    return this.http.get<NasaApi>(`${this.API_URL}/apod?api_key=${this.API_KEY}`);
 }
 
   getDataFromNasaByDate = (date: string): Observable<NasaApi[]> => {
