@@ -1,8 +1,3 @@
-<div class="container-sm" *ngFor="let data of dataFromNasaByDate">
-  <div class="p-4 mb-2 mt-2 bg-primary text-white rounded text-center"><h3>NASA Picture of the Day | {{givenDate | date: 'dd.MM.yyyy'}}</h3></div>
-  <p class="text-center text-primary">{{data?.title}} - {{data?.date}} - {{data?.copyright}}</p>
-  <p>
-    <i>{{data?.explanation}}</i>
-  </p>
-  <img src="{{data?.url}}" alt="{{data?.copyright}}" class="img-fluid rounded mx-auto d-block ">
+<div *ngFor="let data of dataFromNasaByDate">
+  <app-template [dataFromApi]="data"></app-template>
 </div>

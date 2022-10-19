@@ -7,12 +7,14 @@ import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from "@angular/common/http";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ByDateComponent } from './by-date/by-date.component';
+import { TemplateComponent } from './model/template/template.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ByDateComponent
+    ByDateComponent,
+    TemplateComponent
   ],
   imports: [
     BrowserModule,
