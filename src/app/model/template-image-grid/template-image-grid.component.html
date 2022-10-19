@@ -2,7 +2,7 @@
   <div class="p-4 mb-2 mt-2 bg-primary text-white rounded text-center">
     <img src="assets/images/nasa-logo.png" class="logo" alt="logo">
     <h3>NASA Picture of the Day</h3>
-    <h5>From {{ fromDate | date: 'EEEE, dd.MM' }} to {{ toDate | date: 'EEEE, dd.MM'}}</h5>
+    From {{ fromDate | date: 'EEEE, dd.MM' }} to {{ toDate | date: 'EEEE, dd.MM'}}
   </div>
   <div *ngFor="let item of imageThumbnails">
   <div class="card-img-top">
