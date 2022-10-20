@@ -1,8 +1,9 @@
-<div class="container-sm">
+<div class="container-fluid">
   <div class="p-4 mb-2 mt-2 bg-primary text-white rounded text-center">
     <img src="assets/images/nasa-logo.png" class="logo" alt="logo">
     <h3>NASA Picture of the Day</h3>
     {{ dataFromApi?.date | date: 'dd.MM.yyyy' }}
+  <app-input-datepicker></app-input-datepicker>
   </div>
   <p class="text-center text-primary">{{dataFromApi?.title}} - {{dataFromApi?.date}} - {{dataFromApi?.copyright}}</p>
   <p>

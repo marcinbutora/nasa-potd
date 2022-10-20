@@ -10,6 +10,8 @@ import { ByDateComponent } from './by-date/by-date.component';
 import { TemplateComponent } from './model/template/template.component';
 import { TemplateImageGridComponent } from './model/template-image-grid/template-image-grid.component';
 import { GalleryMonthComponent } from './gallery-month/gallery-month.component';
+import { InputDatepickerComponent } from './model/input-datepicker/input-datepicker.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,13 +20,16 @@ import { GalleryMonthComponent } from './gallery-month/gallery-month.component';
     ByDateComponent,
     TemplateComponent,
     TemplateImageGridComponent,
-    GalleryMonthComponent
+    GalleryMonthComponent,
+    InputDatepickerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-  HttpClientModule,
-  NgbModule],
+    HttpClientModule,
+    NgbModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

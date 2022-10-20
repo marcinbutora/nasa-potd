@@ -1,0 +1,13 @@
+<form class="container align-items-center" [formGroup]="chooseDateForm">
+  <div class="form-group row">
+    <div class="col">
+      <input type="date" class="form-control" formControlName="fromDate">
+    </div>
+    <div class="col">
+      <input type="date" class="form-control" formControlName="toDate">
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-info w-100" (click)="searchByDates()">Search photos</button>
+    </div>
+  </div>
+</form>
