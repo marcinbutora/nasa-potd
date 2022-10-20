@@ -8,9 +8,6 @@ import {Router} from "@angular/router";
   styleUrls: ['./input-datepicker.component.css']
 })
 export class InputDatepickerComponent {
-  fromDate: string = ''
-  toDate: string = ''
-
   constructor(private route: Router) {
   }
 
