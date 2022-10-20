@@ -12,6 +12,7 @@ import { TemplateImageGridComponent } from './model/template-image-grid/template
 import { GalleryMonthComponent } from './gallery-month/gallery-month.component';
 import { InputDatepickerComponent } from './model/input-datepicker/input-datepicker.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { FooterComponent } from './model/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     TemplateComponent,
     TemplateImageGridComponent,
     GalleryMonthComponent,
-    InputDatepickerComponent
+    InputDatepickerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
