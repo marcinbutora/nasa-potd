@@ -13,6 +13,7 @@ import { GalleryMonthComponent } from './gallery-month/gallery-month.component';
 import { InputDatepickerComponent } from './model/input-datepicker/input-datepicker.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { FooterComponent } from './model/footer/footer.component';
+import { SpinnerComponent } from './model/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FooterComponent } from './model/footer/footer.component';
     TemplateImageGridComponent,
     GalleryMonthComponent,
     InputDatepickerComponent,
-    FooterComponent
+    FooterComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
